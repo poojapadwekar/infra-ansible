@@ -1,0 +1,11 @@
+- name: Get the prometheus configuration
+  ansible.builtin.template:
+    src: prometheus.yml
+    desc: cat /opt/prometheus/prometheus.yml
+
+
+- name: Restart the service prometheus
+  ansible.builtin.systemd:
+    name: prometheus
+    state: restarted
+
