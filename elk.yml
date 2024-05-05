@@ -1,4 +1,4 @@
 - name: Elk Setup
   hosts: all
   roles:
-    elk
+    - elk
